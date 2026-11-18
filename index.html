@@ -1,0 +1,231 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>BA &amp; PM Openings, Nov 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one working column; summary strip, filter bar, then grouped tables. Clinical teal accent. */
+:root{
+  --bg:#f6f8f8; --surface:#ffffff; --fg:#17242a; --muted:#5b6b72; --line:#dbe3e5;
+  --accent:#0f7c80; --accent-soft:#e0f1f1;
+  --good:#1d7a46; --good-soft:#e2f3e8; --warn:#9a5b00; --warn-soft:#fbefd9; --bad:#a3302b; --bad-soft:#f8e3e1;
+  --display:"Public Sans",system-ui,sans-serif; --body:"Public Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1719; --surface:#162225; --fg:#e3ecee; --muted:#93a6ab; --line:#26363a;
+  --accent:#4fc3c4; --accent-soft:#163a3c;
+  --good:#6fd39a; --good-soft:#173527; --warn:#f0b85a; --warn-soft:#3a2c12; --bad:#f08b84; --bad-soft:#3d1d1b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1719; --surface:#162225; --fg:#e3ecee; --muted:#93a6ab; --line:#26363a;
+  --accent:#4fc3c4; --accent-soft:#163a3c;
+  --good:#6fd39a; --good-soft:#173527; --warn:#f0b85a; --warn-soft:#3a2c12; --bad:#f08b84; --bad-soft:#3d1d1b; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+h1{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-family:var(--display);font-size:1.15rem;margin:0;text-wrap:balance}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.chipcard{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;min-width:0}
+.chipcard b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+.stats{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.stats span strong{color:var(--fg);font-weight:500}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px;z-index:5;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{font:inherit;font-size:.85rem;border:0;background:none;color:var(--fg);padding:6px 12px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+.seg button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=search]{font:inherit;font-size:.9rem;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);flex:1 1 200px;min-width:0}
+section{display:grid;gap:10px}
+.sechead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.sechead p{margin:0;color:var(--muted);font-size:.88rem}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:.88rem}
+th{text-align:left;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.role{font-weight:600;min-width:200px}
+td.role small{display:block;font-weight:400;color:var(--muted);margin-top:2px}
+td.date{font-family:var(--mono);font-size:.8rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.p-remote{background:var(--accent-soft);color:var(--accent)}
+.p-hybrid{background:var(--good-soft);color:var(--good)}
+.p-onsite{background:var(--line);color:var(--muted)}
+.f-strong{background:var(--good-soft);color:var(--good)}
+.f-good{background:var(--accent-soft);color:var(--accent)}
+.f-stretch{background:var(--warn-soft);color:var(--warn)}
+.soon{background:var(--bad-soft);color:var(--bad)}
+.old{color:var(--warn)}
+a{color:var(--accent)}
+td a{font-weight:500;white-space:nowrap}
+.applied{width:18px;height:18px;accent-color:var(--accent)}
+tr.done td{opacity:.5}
+.empty{padding:14px;color:var(--muted)}
+.notes{display:grid;gap:8px;font-size:.9rem;color:var(--muted);max-width:80ch}
+.notes ul{margin:0;padding-left:18px;display:grid;gap:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Job search · checked 18 Nov 2026</div>
+    <h1>BA &amp; PM Openings, Nov 2026</h1>
+    <p class="lede">Open roles that match a Lead Business Analyst profile with 10+ years in healthcare IT, interim Product Owner experience and an interest in IT project management. Sri Lanka roles (onsite or hybrid) first, then remote roles open to Sri Lanka, then healthcare remote roles to check for eligibility.</p>
+  </header>
+
+  <div class="profile" aria-label="Profile match summary">
+    <div class="chipcard"><b>Strongest angle</b>Healthcare IT and EHR: FHIR, SNOMED CT, DICOM, clinical order management</div>
+    <div class="chipcard"><b>Target titles</b>Lead or Senior BA, Business Systems Analyst, Product Owner, IT or Technical PM, Delivery Manager</div>
+    <div class="chipcard"><b>Second domain</b>Capital markets (LSEG / MillenniumIT surveillance), useful for DirectFN, banking and fintech roles</div>
+    <div class="chipcard"><b>Excluded</b>Current employer, interns, trainees, associate and junior roles</div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="bar" role="toolbar" aria-label="Filters">
+    <div class="seg" id="arr" aria-label="Work arrangement">
+      <button type="button" data-v="all" aria-pressed="true">All</button>
+      <button type="button" data-v="Remote" aria-pressed="false">Remote</button>
+      <button type="button" data-v="Hybrid" aria-pressed="false">Hybrid</button>
+      <button type="button" data-v="Onsite" aria-pressed="false">Onsite / not stated</button>
+    </div>
+    <div class="seg" id="kind" aria-label="Role type">
+      <button type="button" data-v="all" aria-pressed="true">All roles</button>
+      <button type="button" data-v="BA" aria-pressed="false">BA</button>
+      <button type="button" data-v="PM" aria-pressed="false">PM / Delivery</button>
+      <button type="button" data-v="Product" aria-pressed="false">Product</button>
+    </div>
+    <input type="search" id="q" placeholder="Search role, company, note" aria-label="Search">
+  </div>
+
+  <div id="groups"></div>
+
+  <div class="notes">
+    <h2>How to read this</h2>
+    <ul>
+      <li><strong>Fit</strong>: Strong means healthcare or lead-level match; Good means senior-level role in a related domain; Stretch means title or domain is a step sideways.</li>
+      <li><strong>Closes soon</strong> marks a closing date within 3 days. Topjobs.lk postings carry a reference number; search it on topjobs.lk to open the ad.</li>
+      <li><strong>Onsite / not stated</strong>: most Sri Lankan ads do not state the arrangement. Ask about hybrid at screening.</li>
+      <li>Dates marked older than 45 days may already be filled. Confirm each role is open on the employer's site before applying.</li>
+      <li>Remote roles tagged "Anywhere" or with a country list including Sri Lanka come from Himalayas and Jobgether. US remote healthcare roles usually require US work authorization.</li>
+      <li>Tick "Applied" to grey out a row; it is remembered in this browser only.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+const TJ_IT="https://www.topjobs.lk/applicant/vacancybyfunctionalarea.jsp?FA=SDQ";
+const TJ_COM="https://www.topjobs.lk/applicant/vacancybyfunctionalarea.jsp?FA=COM";
+const IT=n=>"https://itpro.lk/job/"+n+"/";
+const HM=(c,j)=>"https://himalayas.app/companies/"+c+"/jobs/"+j;
+// g: group, k: kind, a: arrangement, fit, posted/closes ISO or text
+const JOBS=[
+// ---- Top matches
+{g:"top",k:"BA",role:"Lead Business Analyst",note:"7+ yrs BA incl. 5+ yrs healthcare and health insurance (required). US hours, evening calls. Ref 220808.",co:"Leading IT organization (via Lkcareers)",loc:"Colombo",a:"Onsite",fit:"Strong",posted:"",closes:"",url:"https://rooster.jobs/jobs/16015"},
+{g:"top",k:"Product",role:"Product Owner",note:"Healthcare software. 6+ yrs as PO / Senior BA / Product Analyst. Valid through 19 Nov.",co:"VitalHub Innovations Lab",loc:"Colombo",a:"Onsite",fit:"Strong",posted:"2026-09-13",closes:"2026-11-19",url:IT("14797/product-owner-at-vitalhub-innovations-lab")},
+{g:"top",k:"BA",role:"Senior Lead, Business Analyst",note:"Topjobs ref 1568576.",co:"Kelly Felder",loc:"Piliyandala",a:"Onsite",fit:"Strong",posted:"2026-11-06",closes:"2026-11-20",url:TJ_IT},
+{g:"top",k:"BA",role:"Lead Business Analyst",note:"Full-time.",co:"George Bernard Consulting",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-11-05",closes:"",url:"https://www.drjobpro.com/sri-lanka/business-analysis-jobs-in-colombo"},
+{g:"top",k:"BA",role:"Senior Business Analyst",note:"Capital markets fintech, matches LSEG background. Topjobs ref 1570236.",co:"DirectFN",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-11-11",closes:"2026-11-25",url:IT("15755/senior-business-analyst-at-directfn")},
+{g:"top",k:"BA",role:"Senior Business Systems Analyst",note:"Banking.",co:"HSBC",loc:"Colombo",a:"Hybrid",fit:"Good",posted:"2026-11-08",closes:"",url:"https://www.levels.fyi/jobs/location/sri-lanka"},
+// ---- Sri Lanka BA
+{g:"lk",k:"BA",role:"Senior Business Analyst",note:"",co:"Empite",loc:"Sri Lanka",a:"Remote",fit:"Good",posted:"2026-10-28",closes:"",url:IT("15613/senior-business-analyst-at-empite")},
+{g:"lk",k:"BA",role:"Senior Business Analyst",note:"",co:"VS ONE WORLD (Pvt) Ltd",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-10-20",closes:"",url:IT("15525/senior-business-analyst-at-vs-one-world-pvt-ltd")},
+{g:"lk",k:"BA",role:"Senior Business Systems Analyst",note:"ERP product company.",co:"IFS",loc:"Colombo",a:"Hybrid",fit:"Good",posted:"30+ days ago",closes:"",url:"https://www.drjobpro.com/sri-lanka/business-analysis-jobs-in-colombo"},
+{g:"lk",k:"BA",role:"Senior Business Analyst / Product Owner",note:"Combined BA and PO role.",co:"Eliv8 Labs",loc:"Colombo",a:"Hybrid",fit:"Good",posted:"30+ days ago",closes:"",url:"https://www.drjobpro.com/sri-lanka/business-analysis-jobs-in-colombo"},
+{g:"lk",k:"BA",role:"Senior Business Analyst",note:"",co:"Swivel Group",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-09-10",closes:"",url:IT("15063/senior-business-analyst-at-swivel-group")},
+{g:"lk",k:"BA",role:"Senior Business Analyst, Data & MDM",note:"Master data management focus.",co:"EFutures",loc:"Colombo",a:"Onsite",fit:"Stretch",posted:"2026-09-18",closes:"",url:IT("15153/senior-business-analyst-data-master-data-management-at-efutures")},
+{g:"lk",k:"BA",role:"Technical Business Analyst",note:"Senior, 5 to 10 yrs. Outsourcing / BPO.",co:"magentIQ",loc:"Sri Lanka",a:"Remote",fit:"Good",posted:"30+ days ago",closes:"",url:"https://jobgether.com/offer/6aab2708a819b4e027cd783c-technical-business-analyst-remote-sri-lanka"},
+{g:"lk",k:"BA",role:"Business Analyst / Project Manager",note:"Level not stated.",co:"Thenex Global",loc:"Sri Lanka",a:"Remote",fit:"Good",posted:"2026-10-05",closes:"",url:IT("15348/business-analyst-project-manager-at-thenex-global")},
+{g:"lk",k:"BA",role:"Business Analyst",note:"Level not stated. Topjobs ref 1570860.",co:"Micronet Global Services",loc:"Colombo",a:"Onsite",fit:"Stretch",posted:"2026-11-12",closes:"2026-11-26",url:TJ_COM},
+{g:"lk",k:"BA",role:"Business Analyst",note:"Level not stated. Topjobs ref 1568319.",co:"Appoyo",loc:"Colombo 6",a:"Onsite",fit:"Stretch",posted:"2026-11-06",closes:"2026-11-20",url:TJ_IT},
+{g:"lk",k:"BA",role:"Business Analyst",note:"Level not stated.",co:"Verdentra",loc:"Colombo",a:"Onsite",fit:"Stretch",posted:"2026-10-19",closes:"",url:IT("15383/business-analyst-at-verdentra")},
+{g:"lk",k:"BA",role:"Project Manager / Business Analyst",note:"Level not stated.",co:"Surecore (Pvt) Ltd",loc:"Colombo",a:"Onsite",fit:"Stretch",posted:"2026-09-09",closes:"",url:IT("15032/project-manager-business-analyst-pmba-at-surecore-pvt-ltd")},
+// ---- Sri Lanka PM / delivery
+{g:"lk",k:"PM",role:"IT Project Manager",note:"Topjobs ref 1571104.",co:"Cherry Global",loc:"Colombo 15",a:"Onsite",fit:"Good",posted:"2026-11-13",closes:"2026-11-27",url:TJ_IT},
+{g:"lk",k:"PM",role:"IT Project Manager",note:"Banking. Topjobs ref 1568620.",co:"Cargills Bank PLC",loc:"Colombo 3",a:"Onsite",fit:"Good",posted:"2026-11-06",closes:"2026-11-20",url:TJ_IT},
+{g:"lk",k:"PM",role:"Technical Project Manager, US Client Operations",note:"US clients. Topjobs ref 1571182.",co:"eBEYONDS (Pvt) Ltd",loc:"Pannipitiya",a:"Onsite",fit:"Good",posted:"2026-11-13",closes:"2026-11-27",url:TJ_IT},
+{g:"lk",k:"PM",role:"Web Project Manager",note:"Web and digital. Topjobs ref 1571185.",co:"eBEYONDS (Pvt) Ltd",loc:"Pannipitiya",a:"Onsite",fit:"Stretch",posted:"2026-11-13",closes:"2026-11-27",url:TJ_IT},
+{g:"lk",k:"PM",role:"Project Manager",note:"Topjobs ref 1569174.",co:"Hitachi",loc:"Colombo 6",a:"Onsite",fit:"Good",posted:"2026-11-09",closes:"2026-11-23",url:TJ_COM},
+{g:"lk",k:"PM",role:"Project Manager",note:"Topjobs ref 1569481.",co:"Webappclouds (Pvt) Ltd",loc:"Nawala",a:"Onsite",fit:"Good",posted:"2026-11-10",closes:"2026-11-24",url:TJ_IT},
+{g:"lk",k:"PM",role:"Project Manager, AI & Legal Tech",note:"Topjobs ref 1568403.",co:"Muve Colombo (Pvt) Ltd",loc:"Colombo",a:"Onsite",fit:"Stretch",posted:"2026-11-06",closes:"2026-11-20",url:TJ_COM},
+{g:"lk",k:"PM",role:"Project Manager, Banking & Finance (Assistant Manager)",note:"Grade may sit below 10 yrs. Topjobs ref 1573006.",co:"Ernst & Young",loc:"Colombo 3",a:"Onsite",fit:"Stretch",posted:"2026-11-18",closes:"2026-12-02",url:TJ_IT},
+{g:"lk",k:"PM",role:"AI-Native Delivery Manager",note:"",co:"JRC Software",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-11-05",closes:"",url:IT("15697/ai-native-delivery-manager-at-jrc-software")},
+{g:"lk",k:"PM",role:"ERP Project Manager",note:"",co:"Kaizens Group",loc:"Colombo",a:"Onsite",fit:"Stretch",posted:"2026-11-14",closes:"",url:IT("15783/erp-project-manager-at-kaizens-group")},
+{g:"lk",k:"PM",role:"Senior Project Manager",note:"Sri Lanka explicit.",co:"George Bernard Consulting",loc:"Sri Lanka",a:"Remote",fit:"Good",posted:"2026-11-02",closes:"",url:HM("george-bernard-consulting","senior-project-manager")},
+{g:"lk",k:"PM",role:"Project Manager",note:"Sri Lanka explicit. Fashion / retail PLM software.",co:"Centric Software",loc:"Sri Lanka",a:"Remote",fit:"Good",posted:"2026-11-08",closes:"",url:HM("centric-software-inc","project-manager")},
+{g:"lk",k:"PM",role:"Project Manager, Odoo ERP Implementation",note:"",co:"Cygnus One (Pvt) Ltd",loc:"Kurunegala / Colombo",a:"Onsite",fit:"Stretch",posted:"2026-10-26",closes:"",url:IT("15580/project-manager-odoo-erp-implementation-at-cygnus-one-pvt-ltd")},
+{g:"lk",k:"PM",role:"Project Manager",note:"",co:"OKLO Private Limited",loc:"Colombo",a:"Onsite",fit:"Stretch",posted:"2026-10-09",closes:"",url:IT("15425/project-manager-at-oklo-private-limited")},
+{g:"lk",k:"PM",role:"Project Manager, Banking Applications",note:"",co:"Asia Pacific Technology Systems",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-10-05",closes:"",url:IT("15363/project-manager-banking-applications-at-asia-pacific-technology-systems-pvt-ltd")},
+{g:"lk",k:"PM",role:"Programme Manager / Head of Projects",note:"Senior programme role.",co:"JIT Resourcing & Consultancy",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-09-30",closes:"",url:IT("15297/programme-manager-head-of-projects-at-jit-resourcing-consultancy-services")},
+{g:"lk",k:"PM",role:"Technical Project Manager",note:"",co:"Digital Turtles",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-09-24",closes:"",url:IT("15239/technical-project-manager-at-digital-turtles")},
+{g:"lk",k:"PM",role:"Technical Project Manager",note:"",co:"Celestial BI",loc:"Sri Lanka",a:"Remote",fit:"Good",posted:"2026-09-22",closes:"",url:IT("15199/technical-project-manager-at-celestial-bi")},
+{g:"lk",k:"PM",role:"Project Delivery Manager",note:"",co:"JIT Resourcing & Consultancy",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-09-09",closes:"",url:IT("15050/project-delivery-manager-at-jit-resourcing-consultancy-services")},
+// ---- Sri Lanka product
+{g:"lk",k:"Product",role:"Senior Product Manager",note:"Restaurant procurement SaaS.",co:"Cut+Dry",loc:"Colombo",a:"Onsite",fit:"Good",posted:"2026-11-11",closes:"",url:"https://www.levels.fyi/jobs?jobId=10whr0f5qzfcp"},
+{g:"lk",k:"Product",role:"Senior Product Manager",note:"Sri Lanka explicit.",co:"PulseiD",loc:"Sri Lanka",a:"Remote",fit:"Good",posted:"2026-10-17",closes:"",url:HM("pulseid","senior-product-manager")},
+{g:"lk",k:"Product",role:"Senior Product Manager",note:"Sri Lanka explicit.",co:"George Bernard Consulting",loc:"Sri Lanka",a:"Remote",fit:"Good",posted:"2026-10-04",closes:"",url:HM("george-bernard-consulting","senior-product-manager")},
+// ---- Remote, open to Sri Lanka
+{g:"rem",k:"Product",role:"Product Manager",note:"Health-focused company (from its name; check the ad). Level not stated.",co:"Health Hue Digital",loc:"Anywhere",a:"Remote",fit:"Strong",posted:"2026-11-08",closes:"",url:HM("healthhue","product-manager")},
+{g:"rem",k:"BA",role:"Business System Analyst Middle+, Core Banking",note:"Banking.",co:"Banco Plata",loc:"Anywhere",a:"Remote",fit:"Good",posted:"2026-11-05",closes:"",url:HM("banco-plata-s-a-institucion-de-banca-multiple","business-system-analyst-middle-core-banking-systems")},
+{g:"rem",k:"BA",role:"System Analyst Middle+ / Senior",note:"Country list includes Sri Lanka.",co:"Banco Plata",loc:"Listed countries",a:"Remote",fit:"Good",posted:"2026-10-31",closes:"",url:HM("banco-plata-s-a-institucion-de-banca-multiple","system-analyst-middle-senior")},
+{g:"rem",k:"BA",role:"System Analyst",note:"Level and domain not stated.",co:"Hivex",loc:"Anywhere",a:"Remote",fit:"Stretch",posted:"2026-10-11",closes:"",url:HM("hivex","system-analyst-278498494")},
+{g:"rem",k:"PM",role:"Senior Project Manager",note:"Insurance tech consulting. Country list includes Sri Lanka.",co:"Exavalu",loc:"Listed countries",a:"Remote",fit:"Good",posted:"2026-10-17",closes:"",url:HM("exavalu","senior-project-manager")},
+{g:"rem",k:"PM",role:"Project Manager",note:"Level not stated.",co:"Hivex",loc:"Anywhere",a:"Remote",fit:"Stretch",posted:"2026-10-12",closes:"",url:HM("hivex","project-manager-1576628299")},
+{g:"rem",k:"PM",role:"Technical Project Manager, Network Infrastructure",note:"Infra domain.",co:"Nebius",loc:"APAC",a:"Remote",fit:"Stretch",posted:"2026-10-22",closes:"",url:HM("nebius","technical-project-manager-network-infrastructure-apac")},
+{g:"rem",k:"Product",role:"Head, Product Management & Development",note:"Asia country list includes Sri Lanka.",co:"Elegant TD Consulting",loc:"Asia",a:"Remote",fit:"Good",posted:"2026-10-14",closes:"",url:HM("elegant-td-consulting-co-ltd","head-product-management-development")},
+{g:"rem",k:"Product",role:"Senior Product Manager, Desktop",note:"Country list includes Sri Lanka.",co:"ART2HIRE",loc:"Listed countries",a:"Remote",fit:"Stretch",posted:"2026-10-15",closes:"",url:HM("art2hire","senior-product-manager-desktop-windows-macos")},
+{g:"rem",k:"Product",role:"Software Product Manager",note:"Recruiting software.",co:"RecruitingDash",loc:"Anywhere",a:"Remote",fit:"Stretch",posted:"2026-11-07",closes:"",url:HM("recruitingdash","software-product-manager")},
+{g:"rem",k:"Product",role:"Product Manager, AI Agents",note:"",co:"Agentplace",loc:"Anywhere",a:"Remote",fit:"Stretch",posted:"2026-10-23",closes:"",url:HM("agentplace","product-manager-ai-agents")},
+{g:"rem",k:"Product",role:"Product Manager, Trading API",note:"Brokerage API; capital markets angle.",co:"Alpaca",loc:"Anywhere",a:"Remote",fit:"Stretch",posted:"2026-10-11",closes:"",url:HM("alpaca","product-manager-trading-api")},
+// ---- US remote healthcare
+{g:"us",k:"Product",role:"Product Owner / Business Analyst",note:"10+ yrs healthcare tech, Epic, HL7 / FHIR integration.",co:"DVI Technologies",loc:"US remote",a:"Remote",fit:"Strong",posted:"",closes:"",url:"https://www.dice.com/job-detail/7c531bf0-5eb1-4174-b24d-eef489c77eaf"},
+{g:"us",k:"BA",role:"Senior Business Analyst, Healthcare",note:"Healthcare domain; FHIR roles in the same search ask for 10 yrs.",co:"Sage IT",loc:"US remote",a:"Remote",fit:"Strong",posted:"",closes:"",url:"https://www.dice.com/job-detail/2287fa6d-3dc4-4e2f-b9ba-2431f9727370"},
+{g:"us",k:"BA",role:"Healthcare Interoperability Business Analyst",note:"5+ yrs BA, interoperability. US applicants only.",co:"Infinite Solutions",loc:"US remote",a:"Remote",fit:"Strong",posted:"",closes:"",url:"https://www.dice.com/job-detail/1f0f9056-dfa8-4eb1-9206-fb58a71f7b71"},
+{g:"us",k:"Product",role:"Senior BA / Product Manager, Healthcare",note:"100% remote, 12-month contract.",co:"Accion Labs",loc:"Remote",a:"Remote",fit:"Strong",posted:"",closes:"",url:"https://www.dice.com/job-detail/457362e8-2f22-46a2-a2d2-fc1e9157b0c2"},
+];
+const GROUPS={
+  top:["Top matches","Healthcare or lead-level roles in Sri Lanka. Apply to these first."],
+  lk:["Sri Lanka: onsite, hybrid and local remote","BA, project and product roles hiring in Sri Lanka."],
+  rem:["Remote, open to Sri Lanka","Remote roles marked Anywhere, Asia, APAC, or with a country list that includes Sri Lanka."],
+  us:["Remote healthcare, check eligibility","Close skill match, but these postings are likely US-only. Ask about contractor or offshore arrangements."]
+};
+const TODAY=new Date("2026-11-18T00:00:00");
+const fmt=s=>{if(!s)return"Not shown";if(!/^\d{4}-/.test(s))return s;const d=new Date(s+"T00:00:00");return d.toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"})};
+const days=s=>/^\d{4}-/.test(s||"")?Math.round((new Date(s+"T00:00:00")-TODAY)/864e5):null;
+let st={a:"all",k:"all",q:""},applied={};
+try{applied=JSON.parse(localStorage.getItem("applied")||"{}")}catch(e){}
+const key=j=>j.role+"|"+j.co;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function render(){
+  const q=st.q.toLowerCase();
+  const list=JOBS.filter(j=>(st.a==="all"||j.a===st.a)&&(st.k==="all"||j.k===st.k)&&(!q||(j.role+" "+j.co+" "+j.note+" "+j.loc).toLowerCase().includes(q)));
+  const soon=JOBS.filter(j=>{const d=days(j.closes);return d!==null&&d>=0&&d<=3}).length;
+  document.getElementById("stats").innerHTML=
+    `<span><strong>${JOBS.length}</strong> roles</span><span><strong>${JOBS.filter(j=>j.a==="Remote").length}</strong> remote</span><span><strong>${JOBS.filter(j=>j.a==="Hybrid").length}</strong> hybrid</span><span><strong>${JOBS.filter(j=>j.fit==="Strong").length}</strong> strong fit</span><span><strong>${soon}</strong> closing within 3 days</span><span>showing <strong>${list.length}</strong></span>`;
+  const out=[];
+  for(const g of Object.keys(GROUPS)){
+    const rows=list.filter(j=>j.g===g).sort((x,y)=>(y.posted||"").localeCompare(x.posted||""));
+    let body;
+    if(!rows.length) body=`<div class="empty">No roles in this group match the filters.</div>`;
+    else body=`<div class="tbl"><table><thead><tr><th>Applied</th><th>Role</th><th>Company</th><th>Location</th><th>Arrangement</th><th>Posted</th><th>Closes</th><th>Fit</th><th>Ad</th></tr></thead><tbody>${rows.map(j=>{
+      const dc=days(j.closes),dp=days(j.posted),k=key(j),done=!!applied[k];
+      const close=dc!==null&&dc>=0&&dc<=3?`<span class="pill soon">${fmt(j.closes)}</span>`:fmt(j.closes);
+      const posted=dp!==null&&dp<-45?`<span class="old" title="Older than 45 days">${fmt(j.posted)}</span>`:fmt(j.posted);
+      const ac=j.a==="Remote"?"p-remote":j.a==="Hybrid"?"p-hybrid":"p-onsite";
+      const al=j.a==="Onsite"?"Onsite / not stated":j.a;
+      return `<tr class="${done?"done":""}"><td><input type="checkbox" class="applied" id="ap-${esc(btoa(unescape(encodeURIComponent(k))).replace(/=/g,""))}" data-k="${esc(k)}" ${done?"checked":""} aria-label="Applied to ${esc(j.role)} at ${esc(j.co)}"></td><td class="role">${esc(j.role)}${j.note?`<small>${esc(j.note)}</small>`:""}</td><td>${esc(j.co)}</td><td>${esc(j.loc)}</td><td><span class="pill ${ac}">${al}</span></td><td class="date">${posted}</td><td class="date">${close}</td><td><span class="pill f-${j.fit.toLowerCase()}">${j.fit}</span></td><td><a href="${esc(j.url)}" target="_blank" rel="noopener">Open ad</a></td></tr>`}).join("")}</tbody></table></div>`;
+    out.push(`<section><div class="sechead"><h2>${GROUPS[g][0]}</h2><p>${GROUPS[g][1]}</p></div>${body}</section>`);
+  }
+  document.getElementById("groups").innerHTML=out.join("");
+}
+function seg(id,prop){const el=document.getElementById(id);el.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;st[prop]=b.dataset.v;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()})}
+seg("arr","a");seg("kind","k");
+document.getElementById("q").addEventListener("input",e=>{st.q=e.target.value;render()});
+document.getElementById("groups").addEventListener("change",e=>{if(!e.target.classList.contains("applied"))return;const k=e.target.dataset.k;if(e.target.checked)applied[k]=1;else delete applied[k];try{localStorage.setItem("applied",JSON.stringify(applied))}catch(_){}render()});
+render();
+</script>
+
+</body></html>
