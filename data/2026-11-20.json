@@ -1,0 +1,42 @@
+{
+ "date": "2026-11-20",
+ "sources_checked": [
+  "topjobs.lk",
+  "itpro.lk",
+  "ikman.lk",
+  "rooster.jobs (via search)",
+  "levels.fyi",
+  "company careers pages (VitalHub, IFS, WSO2, 99x, Zone24x7, Creative Software and others)",
+  "Himalayas",
+  "Jobgether",
+  "Remote Rocketship",
+  "Wellfound",
+  "We Work Remotely",
+  "Remotive",
+  "Remote OK",
+  "Dice"
+ ],
+ "jobs": [
+  {"group": "lk", "kind": "BA", "role": "Senior Business Analyst / Business Analyst (Banking & Finance)", "company": "ORYSYS Limited", "location": "Colombo 3", "arrangement": "Not stated", "fit": "Good", "posted": "2026-11-20", "closes": "2026-12-03", "note": "topjobs Ref 1573187, banking domain", "url": "https://www.topjobs.lk/applicant/vacancybyfunctionalarea.jsp?FA=SDQ"},
+  {"group": "lk", "kind": "BA", "role": "Business Analyst, IT", "company": "Jobfactory (recruiter)", "location": "Colombo", "arrangement": "Not stated", "fit": "Stretch", "posted": "2026-11-19", "closes": "2026-12-03", "note": "topjobs Ref 1573588, client not named, seniority not stated", "url": "https://www.topjobs.lk/applicant/vacancybyfunctionalarea.jsp?FA=SDQ"},
+  {"group": "lk", "kind": "BA", "role": "Business Analyst", "company": "Stalione Lanka (Pvt) Ltd", "location": "Colombo", "arrangement": "Not stated", "fit": "Stretch", "posted": "2026-11-19", "closes": "", "note": "seniority not stated", "url": "https://itpro.lk/job/15830/business-analyst-at-stalione-lanka-pvt-ltd/"},
+  {"group": "lk", "kind": "PM", "role": "Project Manager cum Business Development Manager", "company": "ESOFT Metro Campus (Pvt) Ltd", "location": "Malabe", "arrangement": "Not stated", "fit": "Stretch", "posted": "2026-11-19", "closes": "2026-12-03", "note": "topjobs Ref 1573554, PM plus sales, education", "url": "https://www.topjobs.lk/applicant/vacancybyfunctionalarea.jsp?FA=MGT"},
+  {"group": "rem", "kind": "Product", "role": "Group Product Manager (Core)", "company": "Wrike", "location": "Anywhere", "arrangement": "Remote", "fit": "Good", "posted": "2026-11-19", "closes": "", "note": "WWR tag says anywhere, confirm eligibility", "url": "https://weworkremotely.com/remote-jobs/wrike-group-product-manager-core"},
+  {"group": "rem", "kind": "Product", "role": "Senior Product Manager", "company": "Yubico Inc.", "location": "Anywhere", "arrangement": "Remote", "fit": "Good", "posted": "2026-11-19", "closes": "", "note": "WWR tag says anywhere, confirm eligibility", "url": "https://weworkremotely.com/remote-jobs/yubico-inc-senior-product-manager"},
+  {"group": "rem", "kind": "Product", "role": "Product Manager, Intelligence Suite", "company": "Hupo", "location": "Listed countries", "arrangement": "Remote", "fit": "Good", "posted": "2026-11-14", "closes": "", "note": "senior AI analytics PM, check Sri Lanka is listed", "url": "https://careers.hupo.co/jobs/8724084-product-manager-intelligence-suite"},
+  {"group": "rem", "kind": "Product", "role": "Staff Product Manager, Privacy", "company": "Lithic", "location": "Anywhere", "arrangement": "Remote", "fit": "Stretch", "posted": "2026-11-19", "closes": "", "note": "fintech card issuing, confirm eligibility", "url": "https://weworkremotely.com/remote-jobs/lithic-staff-product-manager-privacy"},
+  {"group": "rem", "kind": "PM", "role": "Customer Success & Technical Project Manager", "company": "Carbon Trail", "location": "Anywhere", "arrangement": "Remote", "fit": "Stretch", "posted": "2026-11-06", "closes": "", "note": "client implementation, prefers ET or CET hours", "url": "https://wellfound.com/jobs/3400546-customer-success-technical-project-manager"},
+  {"group": "rem", "kind": "PM", "role": "Systems Analyst / IT Project Manager (Freelancer)", "company": "Vexcash", "location": "Anywhere", "arrangement": "Remote", "fit": "Stretch", "posted": "2026-10-30", "closes": "", "note": "freelance, Russian likely required", "url": "https://remoterocketship.com/publicjobs/company/vexcash/jobs/systems-analyst-it-project-manager-freelancer-worldwide-remote/"},
+  {"group": "rem", "kind": "PM", "role": "Project Manager & Business Process Analyst (Freelancer)", "company": "Vexcash", "location": "Anywhere", "arrangement": "Remote", "fit": "Stretch", "posted": "2026-10-30", "closes": "", "note": "freelance, Russian required", "url": "https://join.com/companies/vexcash/16953927-project-manager-and-business-process-analyst-as-freelancer-all-genders"},
+  {"group": "rem", "kind": "PM", "role": "Project Manager (Remote)", "company": "Achieve", "location": "Anywhere", "arrangement": "Remote", "fit": "Stretch", "posted": "2026-10-30", "closes": "", "note": "marketing agency PM", "url": "https://wellfound.com/jobs/3346643-project-manager-remote"},
+  {"group": "rem", "kind": "Product", "role": "Product Manager (Fluent English + Russian)", "company": "Keepgo", "location": "Anywhere", "arrangement": "Remote", "fit": "Stretch", "posted": "2026-11-12", "closes": "2026-12-12", "note": "eSIM telecom, Russian required", "url": "https://himalayas.app/companies/keepgo/jobs/product-manager-fluent-english-russian"},
+  {"group": "rem", "kind": "Product", "role": "Middle Product Manager (Fluent Russian + English)", "company": "Keepgo", "location": "Anywhere", "arrangement": "Remote", "fit": "Stretch", "posted": "2026-11-12", "closes": "2026-12-12", "note": "mid-level, Russian required, time tracking", "url": "https://himalayas.app/companies/keepgo/jobs/middle-product-manager-fluent-russian-english"},
+  {"group": "us", "kind": "PM", "role": "Delivery Manager (Healthcare Data Modernization & Databricks)", "company": "Palni Inc", "location": "US", "arrangement": "Remote", "fit": "Strong", "posted": "2026-11-14", "closes": "", "note": "10+ yrs, payer / Medicaid, contract to hire", "url": "https://www.dice.com/job-detail/8626e917-c1f8-4550-a636-6b82735bfb2f"},
+  {"group": "us", "kind": "BA", "role": "Healthcare Salesforce Business Analyst", "company": "ITBMS Inc.", "location": "US", "arrangement": "Remote", "fit": "Strong", "posted": "2026-11-20", "closes": "", "note": "10+ yrs, Health Cloud, integrations", "url": "https://www.dice.com/job-detail/c1fb34f2-098b-464b-b385-5e4effb0dcdc"},
+  {"group": "us", "kind": "PM", "role": "Project Manager, CAIDIO (AI, Data, Infra, Ops), Healthcare", "company": "Parmesoft Inc.", "location": "US", "arrangement": "Remote", "fit": "Strong", "posted": "2026-11-18", "closes": "", "note": "clinical analytics programmes, 6 to 12 month contract", "url": "https://www.dice.com/job-detail/b987484b-565c-4889-8cd6-d32c730b8a9d"},
+  {"group": "us", "kind": "BA", "role": "Pega Healthcare Claims System Analyst", "company": "Compest Solutions", "location": "US", "arrangement": "Remote", "fit": "Strong", "posted": "2026-11-18", "closes": "", "note": "Pega, Facets, EDI, W2 only", "url": "https://www.dice.com/job-detail/19651488-a113-4545-be1b-c8f8557e8a81"},
+  {"group": "us", "kind": "BA", "role": "FHIR Subject Matter Expert", "company": "HPTech Inc.", "location": "US", "arrangement": "Remote", "fit": "Strong", "posted": "2026-11-20", "closes": "", "note": "FHIR interoperability", "url": "https://www.dice.com/job-detail/8ae2c4ae-27f5-4104-a417-dbcb872d1a97"},
+  {"group": "us", "kind": "PM", "role": "Project Manager, HHS", "company": "Creative IT Inc", "location": "McLean VA, US", "arrangement": "Remote", "fit": "Good", "posted": "2026-11-20", "closes": "", "note": "federal health programme, remote or hybrid", "url": "https://www.dice.com/job-detail/30645d79-85fe-4afe-b2a8-7239ba6dfcdd"},
+  {"group": "us", "kind": "BA", "role": "Sr Business Analyst", "company": "Motion Recruitment Partners", "location": "US", "arrangement": "Remote", "fit": "Good", "posted": "2026-11-20", "closes": "", "note": "payer search hit, domain not confirmed", "url": "https://www.dice.com/job-detail/5a9216e2-792e-44ab-bce8-fe8084f00858"}
+ ]
+}
