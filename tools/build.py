@@ -12,7 +12,7 @@ data/YYYY-MM-DD.json format:
   "date": "2026-11-19",
   "sources_checked": ["topjobs.lk", "itpro.lk", ...],   (optional)
   "jobs": [
-    {"group": "lk" | "rem" | "us", "kind": "BA" | "PM" | "Product",
+    {"group": "lk" | "rem" | "eu" | "us", "kind": "BA" | "PM" | "Product",
      "role": "...", "company": "...", "location": "...",
      "arrangement": "Remote" | "Hybrid" | "Onsite" | "Not stated",
      "fit": "Strong" | "Good" | "Stretch",
@@ -94,6 +94,7 @@ SECTIONS = [
     ("strong", "Strong fit", "Healthcare or lead-level matches. Look at these first."),
     ("lk", "Sri Lanka: onsite, hybrid and local remote", "Roles hiring in Sri Lanka."),
     ("rem", "Remote, open to Sri Lanka", "Remote roles open to Anywhere, Asia, APAC, or a country list that includes Sri Lanka."),
+    ("eu", "Remote with European companies", "Europe-based teams whose adverts allow working from Sri Lanka or anywhere, usually with some overlap with European hours."),
     ("us", "Remote healthcare, check eligibility", "Close skill match, but probably US-only."),
 ]
 
@@ -102,7 +103,7 @@ def section_of(job):
     g = job.get("group", "lk")
     if job.get("fit") == "Strong" and g != "us":
         return "strong"
-    return g if g in ("lk", "rem", "us") else "lk"
+    return g if g in ("lk", "rem", "eu", "us") else "lk"
 
 
 def row(job, day):
