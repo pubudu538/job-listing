@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>New Roles, 22 Nov 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0} img{max-width:100%}
+/* Layout: one working column; summary strip, filter bar, then grouped tables. Clinical teal accent. */
+:root{
+  --bg:#f6f8f8; --surface:#ffffff; --fg:#17242a; --muted:#5b6b72; --line:#dbe3e5;
+  --accent:#0f7c80; --accent-soft:#e0f1f1;
+  --good:#1d7a46; --good-soft:#e2f3e8; --warn:#9a5b00; --warn-soft:#fbefd9; --bad:#a3302b; --bad-soft:#f8e3e1;
+  --display:"Public Sans",system-ui,sans-serif; --body:"Public Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1719; --surface:#162225; --fg:#e3ecee; --muted:#93a6ab; --line:#26363a;
+  --accent:#4fc3c4; --accent-soft:#163a3c;
+  --good:#6fd39a; --good-soft:#173527; --warn:#f0b85a; --warn-soft:#3a2c12; --bad:#f08b84; --bad-soft:#3d1d1b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1719; --surface:#162225; --fg:#e3ecee; --muted:#93a6ab; --line:#26363a;
+  --accent:#4fc3c4; --accent-soft:#163a3c;
+  --good:#6fd39a; --good-soft:#173527; --warn:#f0b85a; --warn-soft:#3a2c12; --bad:#f08b84; --bad-soft:#3d1d1b; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+h1{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-family:var(--display);font-size:1.15rem;margin:0;text-wrap:balance}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.chipcard{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;min-width:0}
+.chipcard b{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+.stats{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.stats span strong{color:var(--fg);font-weight:500}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px;z-index:5;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{font:inherit;font-size:.85rem;border:0;background:none;color:var(--fg);padding:6px 12px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+.seg button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=search]{font:inherit;font-size:.9rem;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);flex:1 1 200px;min-width:0}
+section{display:grid;gap:10px}
+.sechead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.sechead p{margin:0;color:var(--muted);font-size:.88rem}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:.88rem}
+th{text-align:left;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.role{font-weight:600;min-width:200px}
+td.role small{display:block;font-weight:400;color:var(--muted);margin-top:2px}
+td.date{font-family:var(--mono);font-size:.8rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.p-remote{background:var(--accent-soft);color:var(--accent)}
+.p-hybrid{background:var(--good-soft);color:var(--good)}
+.p-onsite{background:var(--line);color:var(--muted)}
+.f-strong{background:var(--good-soft);color:var(--good)}
+.f-good{background:var(--accent-soft);color:var(--accent)}
+.f-stretch{background:var(--warn-soft);color:var(--warn)}
+.soon{background:var(--bad-soft);color:var(--bad)}
+.old{color:var(--warn)}
+a{color:var(--accent)}
+td a{font-weight:500;white-space:nowrap}
+.applied{width:18px;height:18px;accent-color:var(--accent)}
+tr.done td{opacity:.5}
+.empty{padding:14px;color:var(--muted)}
+.notes{display:grid;gap:8px;font-size:.9rem;color:var(--muted);max-width:80ch}
+.notes ul{margin:0;padding-left:18px;display:grid;gap:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.nav{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.9rem}
+.nav a{font-weight:500}
+.daylist{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.daylist li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline}
+.daylist .d{font-family:var(--mono);font-weight:500;min-width:120px}
+.daylist .c{color:var(--muted);font-size:.88rem}
+</style></head><body>
+<div class="wrap"><header><div class="eyebrow">Daily job watch · 22 November 2026</div><h1>New roles, 22 November 2026</h1><p class="lede">Roles found for the first time on this date. Earlier roles are in the main report and on earlier dates.</p></header><nav class="nav" aria-label="Pages"><a href="../">Main report</a> <a href="./">All dates</a> <a href="2026-11-21.html">&larr; 21 Nov 2026</a></nav><div class="stats"><span><strong>14</strong> new roles</span><span><strong>1</strong> strong fit</span><span><strong>1</strong> closing within 3 days</span></div><section><div class="sechead"><h2>Sri Lanka: onsite, hybrid and local remote</h2><p>Roles hiring in Sri Lanka.</p></div><div class="tbl"><table><thead><tr><th>Role</th><th>Company</th><th>Location</th><th>Arrangement</th><th>Posted</th><th>Closes</th><th>Fit</th><th>Ad</th></tr></thead><tbody><tr><td class="role">Senior Staff Consultant (Product Owner / Business Analyst)<small>e-commerce and BI, 8+ yrs PO/BA, Sri Lanka remote</small></td><td>Nagarro</td><td>Sri Lanka</td><td><span class="pill p-remote">Remote</span></td><td class="date">Not shown</td><td class="date">30 Nov 2026</td><td><span class="pill f-good">Good</span></td><td><a href="https://himalayas.app/companies/nagarro/jobs/senior-staff-consultant" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Associate Principal Engineer, Delivery<small>delivery manager track, Agile, 5+ yrs</small></td><td>Nagarro</td><td>Sri Lanka</td><td><span class="pill p-remote">Remote</span></td><td class="date">Not shown</td><td class="date">30 Nov 2026</td><td><span class="pill f-good">Good</span></td><td><a href="https://himalayas.app/companies/nagarro/jobs/associate-principal-engineer-delivery-2070557504" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Senior Staff Engineer, Delivery<small>delivery and project management track</small></td><td>Nagarro</td><td>Sri Lanka</td><td><span class="pill p-remote">Remote</span></td><td class="date">Not shown</td><td class="date">30 Nov 2026</td><td><span class="pill f-stretch">Stretch</span></td><td><a href="https://himalayas.app/companies/nagarro/jobs/senior-staff-engineer-delivery" target="_blank" rel="noopener">Open ad</a></td></tr></tbody></table></div></section><section><div class="sechead"><h2>Remote, open to Sri Lanka</h2><p>Remote roles open to Anywhere, Asia, APAC, or a country list that includes Sri Lanka.</p></div><div class="tbl"><table><thead><tr><th>Role</th><th>Company</th><th>Location</th><th>Arrangement</th><th>Posted</th><th>Closes</th><th>Fit</th><th>Ad</th></tr></thead><tbody><tr><td class="role">International Delivery Manager<small>career services operations delivery, 6+ yrs</small></td><td>Talent Inc.</td><td>Most countries except US and Canada</td><td><span class="pill p-remote">Remote</span></td><td class="date">02 Oct 2026</td><td class="date">01 Dec 2026</td><td><span class="pill f-stretch">Stretch</span></td><td><a href="https://himalayas.app/companies/talent-inc/jobs/international-delivery-manager" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Technical Delivery Manager<small>data and analytics consulting delivery</small></td><td>phData</td><td>Listed countries</td><td><span class="pill p-remote">Remote</span></td><td class="date">28 Aug 2026</td><td class="date"><span class="pill soon">23 Nov 2026</span></td><td><span class="pill f-good">Good</span></td><td><a href="https://himalayas.app/companies/phdata/jobs/technical-delivery-manager" target="_blank" rel="noopener">Open ad</a></td></tr></tbody></table></div></section><section><div class="sechead"><h2>Remote with European companies</h2><p>Europe-based teams whose adverts allow working from Sri Lanka or anywhere, usually with some overlap with European hours.</p></div><div class="tbl"><table><thead><tr><th>Role</th><th>Company</th><th>Location</th><th>Arrangement</th><th>Posted</th><th>Closes</th><th>Fit</th><th>Ad</th></tr></thead><tbody><tr><td class="role">Senior Product Architect<small>headless CMS, product-adjacent role, check Sri Lanka eligibility</small></td><td>Storyblok</td><td>Anywhere</td><td><span class="pill p-remote">Remote</span></td><td class="date">20 Nov 2026</td><td class="date">Not shown</td><td><span class="pill f-stretch">Stretch</span></td><td><a href="https://weworkremotely.com/remote-jobs/storyblok-senior-product-architect" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Product Manager (Growth)<small>identity verification SaaS, async, check Sri Lanka eligibility</small></td><td>Sumsub</td><td>Multiple countries</td><td><span class="pill p-remote">Remote</span></td><td class="date">08 Nov 2026</td><td class="date">Not shown</td><td><span class="pill f-stretch">Stretch</span></td><td><a href="https://careers.sumsub.com/jobs/8456327-product-manager-growth" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Product Development Manager, AdTech<small>affiliate marketing SaaS, 3+ yrs, permanent</small></td><td>TradeTracker</td><td>Global</td><td><span class="pill p-remote">Remote</span></td><td class="date">08 Oct 2026</td><td class="date">07 Dec 2026</td><td><span class="pill f-stretch">Stretch</span></td><td><a href="https://tradetracker.jobs.personio.com/job/1794477" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Engineering Manager, Service Delivery Manager, RDT Remote APAC Multilingual<small>pharma health IT service delivery, ITIL, 5+ yrs, multilingual, check Sri Lanka eligibility</small></td><td>Roche (via Lifelancer)</td><td>APAC</td><td><span class="pill p-remote">Remote</span></td><td class="date">27 Sep 2026</td><td class="date">26 Nov 2026</td><td><span class="pill f-good">Good</span></td><td><a href="https://himalayas.app/companies/lifelancer/jobs/engineering-manager-service-delivery-manager-rdt-remote-apac-multilingual" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Enterprise Project Manager<small>open source enterprise IT, PMP and Scrum certs, evergreen, re-listed 19 Nov</small></td><td>Canonical</td><td>Worldwide</td><td><span class="pill p-remote">Remote</span></td><td class="date">05 Aug 2026</td><td class="date">17 Jan 2027</td><td><span class="pill f-good">Good</span></td><td><a href="https://job-boards.greenhouse.io/canonical/jobs/3256589" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Project Manager, Ubuntu Embedded Systems<small>embedded and IoT Linux delivery, PMP or PRINCE2 preferred</small></td><td>Canonical</td><td>APAC</td><td><span class="pill p-remote">Remote</span></td><td class="date">Not shown</td><td class="date">17 Jan 2027</td><td><span class="pill f-stretch">Stretch</span></td><td><a href="https://job-boards.greenhouse.io/canonical/jobs/4953222" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">Fraud Prevention Product Solutions Lead<small>fraud prevention product, 5+ yrs, check Sri Lanka eligibility</small></td><td>Sumsub</td><td>Multiple countries</td><td><span class="pill p-remote">Remote</span></td><td class="date">Not shown</td><td class="date">Not shown</td><td><span class="pill f-stretch">Stretch</span></td><td><a href="https://careers.sumsub.com/jobs/8749368-fraud-prevention-product-solutions-lead" target="_blank" rel="noopener">Open ad</a></td></tr><tr><td class="role">NetSuite Business Analyst<small>finance systems BA and NetSuite admin, check Sri Lanka eligibility</small></td><td>Sumsub</td><td>Multiple countries</td><td><span class="pill p-remote">Remote</span></td><td class="date">Not shown</td><td class="date">Not shown</td><td><span class="pill f-stretch">Stretch</span></td><td><a href="https://careers.sumsub.com/jobs/8585385-netsuite-business-analyst" target="_blank" rel="noopener">Open ad</a></td></tr></tbody></table></div></section><section><div class="sechead"><h2>Remote healthcare, check eligibility</h2><p>Close skill match, but probably US-only.</p></div><div class="tbl"><table><thead><tr><th>Role</th><th>Company</th><th>Location</th><th>Arrangement</th><th>Posted</th><th>Closes</th><th>Fit</th><th>Ad</th></tr></thead><tbody><tr><td class="role">FHIR Business Analyst (Sr)<small>HL7 v2 and CCDA to FHIR mapping, 10+ yrs, 12-month contract, likely US-only</small></td><td>Avenues International</td><td>US remote (Eastern time)</td><td><span class="pill p-remote">Remote</span></td><td class="date">05 Nov 2026</td><td class="date">Not shown</td><td><span class="pill f-strong">Strong</span></td><td><a href="https://www.dice.com/job-detail/79939076-d827-4540-b9a9-d50f53585bb0" target="_blank" rel="noopener">Open ad</a></td></tr></tbody></table></div></section><div class="notes"><p>Sources checked: topjobs.lk, itpro.lk, ikman.lk, levels.fyi, xpress.jobs, company careers pages (VitalHub, IFS, WSO2, 99x, Creative Software, Zone24x7, John Keells IT, Virtusa, Sysco LABS, Axiata Digital Labs), Himalayas, Jobgether, Working Nomads, Remotive, Remote Rocketship, We Work Remotely, EU Remote Jobs, Arbeitnow, Landing.jobs, Wellfound, Greenhouse / Ashby job boards, Dice.</p><p>Confirm each role is still open on the employer's site before applying.</p></div></div></body></html>
